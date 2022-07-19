@@ -30,19 +30,19 @@ class Solution:
         # type b: string
         # return type: bool
 
-        test = True
+        a_list = []
+        b_list = []
 
-        # TODO: Write code below to return a bool with the solution to the prompt
-        if len(a) == len(b):
-            for i in a:
-                if i not in b:
-                    test = False
-            for n in b:
-                if n not in a:
-                    test = False
-        else: return False
+        for i in a:
+            a_list.append(i)
+            
+        for n in b:
+            b_list.append(n)
+        
+        a_list.sort()
+        b_list.sort()
 
-        return test
+        return a_list == b_list
 
 def main():
     string1 = input().strip()
